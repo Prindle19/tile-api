@@ -1,0 +1,4 @@
+cron:
+- description: Update Tile API Session Tokens
+  url: /sessionCron/
+  schedule: every 312 hours

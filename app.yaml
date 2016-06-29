@@ -1,0 +1,17 @@
+application: tile-sessions
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+default_expiration: "1s"
+
+handlers:
+
+- url: /getTile/
+  script: main.app
+  secure: always
+
+- url: /sessionCron/
+  script: main.app
+  secure: always
