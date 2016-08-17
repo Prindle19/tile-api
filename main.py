@@ -142,6 +142,7 @@ class getTile(webapp2.RequestHandler):
         headers = {'Referer': 'https://tile-sessions.appspot.com/'}
         result = urlfetch.fetch(url=url,headers=headers)
         if result.status_code == 200:
+          self.response.headers['Content-Type'] = 'image/jpg'
           self.response.write(result.content)
         else:
           self.response.status = result.status_code
